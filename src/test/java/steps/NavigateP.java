@@ -6,9 +6,10 @@ import org.openqa.selenium.JavascriptExecutor;
 import org.openqa.selenium.Keys;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.interactions.Actions;
+import org.testng.Assert;
 import page.GooglePage;
 import utilities.Driver;
-import utilities.config.Config;
+
 import utilities.config.ConfigEnv;
 
 public class NavigateP {
@@ -36,6 +37,9 @@ public class NavigateP {
         googlePage.clickLink(ConfigEnv.getProperty(value),driver);
         Thread.sleep(7000);
         javascriptExecutor.executeScript("arguments[0].click()",googlePage.playButton);
+
+
+        Assert.assertEquals(driver.getCurrentUrl(),ConfigEnv.getProperty(value));
 
 //        driver.quit();
     }
