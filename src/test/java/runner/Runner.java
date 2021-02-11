@@ -10,7 +10,7 @@ import org.junit.runner.RunWith;
                 "rerun:target/rerun.txt","json:target/cucumber.json"},
         features = "src/test/resources/features",
         glue = "steps",
-        tags = "@regression",
+        tags = "",
         dryRun = false
 )
 public class Runner {
