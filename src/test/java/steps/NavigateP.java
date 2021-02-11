@@ -34,9 +34,9 @@ public class NavigateP {
 
         Thread.sleep(3000);
         googlePage.clickLink(ConfigEnv.getProperty(value),driver);
-        Thread.sleep(1000);
+        Thread.sleep(7000);
         javascriptExecutor.executeScript("arguments[0].click()",googlePage.playButton);
-        Thread.sleep(5000);
+
 //        driver.quit();
     }
 
